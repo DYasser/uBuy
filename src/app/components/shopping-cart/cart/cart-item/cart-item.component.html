@@ -1,3 +1,3 @@
-<div class="cart-item">
+<div class="cart-item" (click)="remove()">
     <span>{{cartItem.productName}}</span> x <span> {{cartItem.qty}}: <b>{{cartItem.price * cartItem.qty}}</b></span>
 </div>

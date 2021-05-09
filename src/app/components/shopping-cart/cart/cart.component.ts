@@ -10,11 +10,13 @@ import { MessengerService } from 'src/app/services/messenger.service';
 })
 export class CartComponent implements OnInit {
 
-  cartItems = [
+  public static cartItems = [
 
   ];
+  public static cartTotal = 0;
 
-  cartTotal = 0;
+  publicReference = CartComponent;
+
 
   constructor(private msg: MessengerService) { }
 
@@ -29,10 +31,10 @@ export class CartComponent implements OnInit {
   addProductToCart(product:Product){
     let productExists = false;
 
-    for(let i in this.cartItems)
+    for(let i in CartComponent.cartItems)
     {
-      if(this.cartItems[i].productId === product.id){
-        this.cartItems[i].qty++;
+      if(CartComponent.cartItems[i].productId === product.id){
+        CartComponent.cartItems[i].qty++;
         productExists = true;
         break;
       }
@@ -40,7 +42,7 @@ export class CartComponent implements OnInit {
 
     if(!productExists) 
     {
-      this.cartItems.push({
+      CartComponent.cartItems.push({
         productId: product.id,
         productName: product.name,
         qty: 1,
@@ -48,9 +50,9 @@ export class CartComponent implements OnInit {
       })
     }
 
-    this.cartTotal = 0;
-    this.cartItems.forEach( item => {
-      this.cartTotal+= item.qty*item.price;
+    CartComponent.cartTotal = 0;
+    CartComponent.cartItems.forEach( item => {
+      CartComponent.cartTotal+= item.qty*item.price;
     })
   }
 
