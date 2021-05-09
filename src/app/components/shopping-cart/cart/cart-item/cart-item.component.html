@@ -1,3 +1,9 @@
-<div class="cart-item" (click)="remove()">
-    <span>{{cartItem.productName}}</span> x <span> {{cartItem.qty}}: <b>{{cartItem.price * cartItem.qty}}</b></span>
+<div class="cart-item" >
+    <div fxLayout="row" >
+        <span fxFlex="60">{{cartItem.productName}} </span> <strong>x</strong>  <span> {{cartItem.qty}}: <b>{{cartItem.price * cartItem.qty}}</b> 
+        </span>
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+    (click)="remove()"><i class="fas fa-trash-alt"></i
+    ></a>
+    </div>
 </div>
