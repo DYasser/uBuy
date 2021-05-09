@@ -32,4 +32,20 @@ export class FiltersComponent implements OnInit {
     });
     ProductListComponent.productList = newlist;
  }
+
+  reset(){
+    this.priceFilterService.setMax(9000);
+    this.priceFilterService.setMin(0);
+    ProductListComponent.productList = this.productService.getProducts();
+    let max = this.priceFilterService.getMax();
+    let min = this.priceFilterService.getMin();
+    let newlist = [];
+    ProductListComponent.productList.forEach(element => {
+      if(element.price <= max && min <= element.price){
+        newlist.push(element);
+      }
+    });
+    ProductListComponent.productList = newlist;
+
+  }
 }
