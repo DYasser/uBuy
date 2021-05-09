@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterByPriceService } from 'src/app/services/filter-by-price.service';
+import { ProductService } from 'src/app/services/product.service';
+import { ProductListComponent } from 'src/app/components/shopping-cart/product-list/product-list.component';
 
 @Component({
   selector: 'app-filters',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private productService: ProductService,
+    private priceFilterService: FilterByPriceService
+    ) { }
 
   ngOnInit(): void {
   }
 
+  onClickSubmit(data) {
+    this.priceFilterService.setMax(data.maximum);
+    this.priceFilterService.setMin(data.minimum);
+    ProductListComponent.productList = this.productService.getProducts();
+    let max = this.priceFilterService.getMax();
+    let min = this.priceFilterService.getMin();
+    let newlist = [];
+    ProductListComponent.productList.forEach(element => {
+      if(element.price <= max && min <= element.price){
+        newlist.push(element);
+      }
+    });
+    ProductListComponent.productList = newlist;
+ }
 }
