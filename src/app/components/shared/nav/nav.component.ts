@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  public static showMsg = false;
+
+  public classRef = NavComponent;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  close()
+  {
+    NavComponent.showMsg = false;
   }
 
 }

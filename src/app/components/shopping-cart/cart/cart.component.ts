@@ -1,7 +1,7 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -18,7 +18,10 @@ export class CartComponent implements OnInit {
   publicReference = CartComponent;
 
 
-  constructor(private msg: MessengerService) { }
+  constructor(
+    private msg: MessengerService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.msg.getMsg().subscribe(
@@ -54,6 +57,10 @@ export class CartComponent implements OnInit {
     CartComponent.cartItems.forEach( item => {
       CartComponent.cartTotal+= item.qty*item.price;
     })
+  }
+
+  gotoCart(){
+    this.router.navigate(['cart']);
   }
 
 }

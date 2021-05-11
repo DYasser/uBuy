@@ -12,6 +12,9 @@ import { CartItemComponent } from './components/shopping-cart/cart/cart-item/car
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
 import { FormsModule } from '@angular/forms';
 import { AuthRoutingModule } from 'src/app/components/auth-routing.module';
+import { ShowCartInfComponent } from 'src/app/components/show-cart-inf/show-cart-inf.component';
+import { OrderComponent } from 'src/app/components/order/order.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { AuthRoutingModule } from 'src/app/components/auth-routing.module';
     ProductListComponent,
     CartComponent,
     CartItemComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    ShowCartInfComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    CommonModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

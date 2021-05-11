@@ -1,0 +1,31 @@
+<body>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">
+                    Book Title
+                </th>
+                <th scope="col">
+                    Quantity
+                </th>
+                <th scope="col">
+                    Price <small>(CN¥)</small> 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hoverable" *ngFor ="let cartItem of cartItems">
+                <td>
+                    {{cartItem.productName}}
+                </td>
+                <td>
+                    {{cartItem.qty}}
+                </td>
+                <td>
+                    {{cartItem.price * cartItem.qty}}
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+    <button type="button" class="btn btn-outline-success" (click)="gotoOrder()">Proceed to Order</button>
+</body>

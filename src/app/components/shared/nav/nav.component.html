@@ -18,4 +18,11 @@
             </ul>
         </div>
     </div>
+    <div class="row successMsg" *ngIf="classRef.showMsg" (click)="close()">
+        <div>
+            <p class="alert alert-success">
+                Subscription Successful!
+            </p>
+        </div>
+    </div>
 </nav>

@@ -1,0 +1,33 @@
+body {
+    font-family: "Poppins", sans-serif;
+  }
+
+.hoverable:hover {
+    background-color: #454d55;
+  }
+
+table { 
+    border-collapse: separate;
+    border-left: 0;
+    border-radius: 6px;
+    border-spacing: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 4px 0 0 0;
+}
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 6px 6px;
+}
+thead:first-child tr:first-child th:last-child {
+    border-radius: 0 6px 0 0;
+}
+button{
+    width: 80%;
+    margin-left: 10%;
+}
