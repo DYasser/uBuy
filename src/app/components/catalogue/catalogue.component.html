@@ -1,1 +1,21 @@
-<p>catalogue works!</p>
+<body>
+    <table class="table table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th *ngFor = "let column of headers ">
+                    {{column}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr class="hoverable" *ngFor ="let row of rows" >
+                <td *ngFor = "let column of headers">
+                    {{row[column]}}
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+</body>
+
+  

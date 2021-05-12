@@ -15,6 +15,8 @@ import { AuthRoutingModule } from 'src/app/components/auth-routing.module';
 import { ShowCartInfComponent } from 'src/app/components/show-cart-inf/show-cart-inf.component';
 import { OrderComponent } from 'src/app/components/order/order.component';
 import { CommonModule } from '@angular/common';
+import { CatalogueComponent } from 'src/app/components/catalogue/catalogue.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { CommonModule } from '@angular/common';
     CartItemComponent,
     ProductItemComponent,
     ShowCartInfComponent,
+    CatalogueComponent,
     OrderComponent
   ],
   imports: [
@@ -35,6 +38,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     AuthRoutingModule,
     CommonModule ,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

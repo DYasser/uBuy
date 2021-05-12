@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
-import { MessengerService } from 'src/app/services/messenger.service';
+import { MessengerService } from 'src/app/services/messenger-service/messenger.service';
 import { Router } from '@angular/router';
 
 @Component({

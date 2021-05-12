@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterByPriceService } from 'src/app/services/filter-by-price.service';
-import { ProductService } from 'src/app/services/product.service';
+import { FilterByPriceService } from 'src/app/services/filter-by-price-service/filter-by-price.service';
+import { ProductService } from 'src/app/services/product-service/product.service';
 import { ProductListComponent } from 'src/app/components/shopping-cart/product-list/product-list.component';
 
 @Component({

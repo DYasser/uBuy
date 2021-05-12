@@ -23,8 +23,7 @@ import { OrderComponent } from './order/order.component';
   ],
   exports: [
     ShoppingCartComponent,
-    AboutUsComponent, 
-    CatalogueComponent
+    AboutUsComponent
   ]
 })
 export class AuthModule { }
