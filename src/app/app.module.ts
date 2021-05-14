@@ -10,13 +10,15 @@ import { ProductListComponent } from './components/shopping-cart/product-list/pr
 import { CartComponent } from './components/shopping-cart/cart/cart.component';
 import { CartItemComponent } from './components/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from 'src/app/components/auth-routing.module';
 import { ShowCartInfComponent } from 'src/app/components/show-cart-inf/show-cart-inf.component';
 import { OrderComponent } from 'src/app/components/order/order.component';
 import { CommonModule } from '@angular/common';
 import { CatalogueComponent } from 'src/app/components/catalogue/catalogue.component';
 import { HttpClientModule } from "@angular/common/http";
+
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { HttpClientModule } from "@angular/common/http";
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AuthRoutingModule,
     CommonModule ,
     HttpClientModule,

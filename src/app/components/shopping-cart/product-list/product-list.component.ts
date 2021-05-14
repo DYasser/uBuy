@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product';
 
-import { ProductService } from 'src/app/services/product-service/product.service';
 import { FilterByPriceService } from 'src/app/services/filter-by-price-service/filter-by-price.service';
+import { CatalogueServiceService } from 'src/app/services/catalogue-service/catalogue-service.service';
 
 @Component({
   selector: 'app-product-list',
@@ -11,17 +10,21 @@ import { FilterByPriceService } from 'src/app/services/filter-by-price-service/f
 })
 export class ProductListComponent implements OnInit {
 
-  public static productList : Product[] = []
+  public static productList = []
 
   public classReference = ProductListComponent;
 
   constructor(
-    private productService: ProductService,
-    private priceFilterService: FilterByPriceService) { }
+    private priceFilterService: FilterByPriceService,
+    private catalogueService: CatalogueServiceService) { }
 
   ngOnInit(){
-    ProductListComponent.productList = this.productService.getProducts();
-    console.log(ProductListComponent.productList);
+    ProductListComponent.productList=[];
+    this.catalogueService.getAllBooks().subscribe( data => {
+      for (let element of data.result) {
+        ProductListComponent.productList.push(element);
+      }
+    });
     let max = this.priceFilterService.getMax();
     let min = this.priceFilterService.getMin();
     let newlist = [];

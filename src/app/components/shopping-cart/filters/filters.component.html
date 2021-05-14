@@ -5,12 +5,12 @@
     <div class="card-body">
         <form #priceFilter = "ngForm" (ngSubmit) = "onClickSubmit(priceFilter.value)" >
             <div class="form-group">
-                <label for="from">From</label>
-                <input type="number" id="from" class="form-control" name = "maximum" placeholder = "Maximum" ngModel>
+                <label for="from">Max</label>
+                <input type="number" id="from" class="form-control" name = "maximum" placeholder = "Maximum" [value]="max" ngModel required >
             </div>
             <div class="form-group">
-                <label for="to">To</label>
-                <input type="number" id="to" class="form-control" name = "minimum" placeholder = "Minimum" ngModel>
+                <label for="to">Min</label>
+                <input type="number" id="to" class="form-control" name = "minimum" placeholder = "Minimum" [value]="min" ngModel required >
             </div>
             <button class="btn btn-success btn-block btn-sm">Search</button>
         </form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartComponent } from '../shopping-cart/cart/cart.component';
 
 @Component({
@@ -8,8 +9,9 @@ import { CartComponent } from '../shopping-cart/cart/cart.component';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
+  promo = "";
   cartItems = [];
   cartTotal = 0;
   nbr = 0;
@@ -26,9 +28,16 @@ export class OrderComponent implements OnInit {
     console.log(this.cartItems);
   }
 
-  checkPromo(){
-    this.promocode = true;
-    this.cartTotal-=5;
+  checkPromo(value:string){
+    if(!this.promocode && (value.toLowerCase() ==="books")){
+      this.cartTotal-=5;
+      this.promocode = true;
+    }
+  }
+
+  order(){
+    CartComponent.cartItems = [];
+    this.router.navigate(['home']);
   }
 
 }

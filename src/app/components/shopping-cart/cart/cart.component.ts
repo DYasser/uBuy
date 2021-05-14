@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger-service/messenger.service';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-cart',
@@ -17,18 +18,20 @@ export class CartComponent implements OnInit {
 
   publicReference = CartComponent;
 
-
   constructor(
     private msg: MessengerService,
     private router: Router
     ) { }
 
   ngOnInit(): void {
-    this.msg.getMsg().subscribe(
-      (product: Product) => {
-        this.addProductToCart(product);
-      }
-    ) 
+    if(AppComponent.startpage){
+      this.msg.getMsg().subscribe(
+        (product: Product) => {
+          this.addProductToCart(product);
+        }
+      ) 
+      AppComponent.startpage = false;
+    }
   }
 
   addProductToCart(product:Product){
@@ -47,7 +50,7 @@ export class CartComponent implements OnInit {
     {
       CartComponent.cartItems.push({
         productId: product.id,
-        productName: product.name,
+        productName: product.title,
         qty: 1,
         price: product.price
       })

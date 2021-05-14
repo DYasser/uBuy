@@ -1,7 +1,7 @@
 <div *ngIf= "publicReference.cartItems.length === 0" class="alert alert-info">Your Cart is Empty!</div>
 
 <ul  *ngIf= "publicReference.cartItems.length > 0" class="list-group">
-    <li class="list-group-item" *ngFor="let item of publicReference.cartItems">
+    <li class="list-group-item items" *ngFor="let item of publicReference.cartItems">
         <app-cart-item [cartItem] = 'item'></app-cart-item>
     </li>
     <li class="list-group-item active" id="total" (click)="gotoCart()">
