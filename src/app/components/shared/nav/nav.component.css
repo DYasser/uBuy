@@ -1,7 +1,20 @@
 .successMsg{
-    width: 50%;
-    margin-bottom: -21px;
-    margin-top: -6px;
-    margin-right: -270px;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 1%;
     cursor: pointer;
+}
+
+.nav-item{
+    font-size:larger;
+}
+
+#cart{
+    margin-left: 70%;
+}
+
+#logo{
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
 }

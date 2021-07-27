@@ -31,6 +31,12 @@ export class CartItemComponent implements OnInit {
     CartComponent.cartItems.forEach( item => {
       CartComponent.cartTotal+= item.qty*item.price;
     })
+    
+    CartComponent.number = 0;
+    CartComponent.cartItems = CartComponent.cartItems;
+    CartComponent.cartItems.forEach( item => {
+      CartComponent.number+= 1*item.qty;
+    });
   }
 
 }

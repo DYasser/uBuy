@@ -1,20 +1,20 @@
-<div class="card shadow-sm">
-    <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]=productItem.img_url height="320px">
+<div class="card shadow-sm" id="itemCard">
+    <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]=productItem.img_url height="250px">
 
-    <div class="card-body">
+    <div class="card-body" >
         <p id="title" class="text-muted">
             {{productItem.title}}
         </p>
         <p class="card-text">
             <strong> {{productItem.price | currency: 'CNY'}} </strong>
         </p>
-        <p class="card-text">{{productItem.description}}</p>
+        <p class="card-text">{{(productItem.description.length > 70)? (productItem.description|slice:0:70)+"...":(productItem.description)}}</p>
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-info" (click)="goToCatalogue()">More info</button>
+                <button type="button" class="btn btn-lg btn-outline-info" (click)="goToCatalogue()">More info</button>
                 <button 
                 type="button" 
-                class="btn btn-sm btn-outline-success"
+                class="btn btn-lg btn-outline-success"
                 (click)="handleAddToCart()"
                 >Add to cart</button>
             </div>

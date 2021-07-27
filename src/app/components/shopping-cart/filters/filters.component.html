@@ -1,6 +1,6 @@
 <div class="card filters">
     <div class="card-header">
-        <b style="font-size: medium;">Filter by price</b>
+        <b>Filter by price</b>
     </div>
     <div class="card-body">
         <form #priceFilter = "ngForm" (ngSubmit) = "onClickSubmit(priceFilter.value)" >
@@ -12,8 +12,8 @@
                 <label for="to">Min</label>
                 <input type="number" id="to" class="form-control" name = "minimum" placeholder = "Minimum" [value]="min" ngModel required >
             </div>
-            <button class="btn btn-success btn-block btn-sm">Search</button>
+            <button class="btn btn-success btn-block ">Search</button>
         </form>
-        <button class="btn btn-primary btn-block btn-sm" id="reset" (click) = "reset()">Reset</button>
+        <button class="btn btn-primary btn-block " id="reset" (click) = "reset()">Reset</button>
     </div>
 </div>

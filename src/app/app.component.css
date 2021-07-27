@@ -2,5 +2,7 @@ body {
     background: url('https://images.pexels.com/photos/2925307/pexels-photo-2925307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     font-family: "Poppins", sans-serif;
     background-attachment: fixed;
-    height: 100%;
+    height: fit-content;
+    background-size: 1280px;
+    zoom: 125%;
 }

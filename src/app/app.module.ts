@@ -17,6 +17,15 @@ import { OrderComponent } from 'src/app/components/order/order.component';
 import { CommonModule } from '@angular/common';
 import { CatalogueComponent } from 'src/app/components/catalogue/catalogue.component';
 import { HttpClientModule } from "@angular/common/http";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -33,7 +42,10 @@ import { HttpClientModule } from "@angular/common/http";
     ProductItemComponent,
     ShowCartInfComponent,
     CatalogueComponent,
-    OrderComponent
+    OrderComponent,
+    RegisterComponent,
+    LoginComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +54,12 @@ import { HttpClientModule } from "@angular/common/http";
     AuthRoutingModule,
     CommonModule ,
     HttpClientModule,
+    NgbModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

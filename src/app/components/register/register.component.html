@@ -1,0 +1,64 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+    <div class="fadeIn first" >
+        <mat-icon>account_circle</mat-icon>
+    </div>
+    
+    <form name="form" [formGroup]="form">
+        <div class="form-group">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username" class="form-control" formControlName="username">
+        <div *ngIf="form.get('username').touched && form.get('username').invalid" class="invalid">
+            <span>Username is required</span>
+        </div>
+
+        <input type="text" id="email" class="fadeIn second" name="email" placeholder="email@email.com" class="form-control" formControlName="email">
+        <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid">
+            <span>Email is required</span>
+        </div>
+
+        <input type="password" id="password" class="fadeIn second" name="password" placeholder="Password" class="form-control" formControlName="password">
+        <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid">
+            <span>Password is required</span>
+        </div>
+        <input type="password" id="confirm-password" class="fadeIn second" name="confirm-password" placeholder="Confirm Password" class="form-control" formControlName="confirmPassword">
+        <div *ngIf="form.get('password').value != form.get('confirmPassword').value " class="invalid">
+            <span>Passwords not matching</span>
+        </div>
+        <div class="gender" >
+            <h5 id="gender">Gender <b>{{gender}}</b></h5>
+                    
+            <br>
+            <span id="male">M <input type="radio"  class="fadeIn second" name="gender" (click)="male()"></span>
+            
+            <strong> or </strong>
+            <span id="female">F <input type="radio" class="fadeIn second" name="gender" (click)="female()"></span>
+            
+        </div>
+
+        <div class="pswdProtect" >
+            <h5>Password protection</h5>
+            
+            <select class="form-control"  [(ngModel)]="selectedQuestion" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let q of questions">
+                    {{q.name}}
+                </option>
+            </select>
+        </div>
+        
+        
+
+        <input type="text" id="answer" class="fadeIn second" name="answer" placeholder="Password protection answer" class="form-control" formControlName="answer">
+        <div *ngIf="form.get('answer').touched && form.get('answer').invalid" class="invalid">
+            <span>Answer is required</span>
+        </div>
+        </div>
+        <input type="submit" class="fadeIn fourth" value="Create account" style="margin-bottom: 15px;" (click)="register()">
+    </form>
+    
+    <div id="formFooter">
+        <a class="underlineHover" 
+        [routerLink]="['/login']" routerLinkActive="active">Already have an account?</a>
+    </div>
+    </div>
+</div>

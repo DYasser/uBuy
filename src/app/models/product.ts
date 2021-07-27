@@ -2,35 +2,14 @@ export class Product {
     id: number;
     title: string;
     description: string;
-    author: string;
-    publisher: string;
-    genre: string;
-    language: string;
     price: number;
-    stock: number;
-    img_url: string;
-
-    constructor(
-        id,
-        title, 
-        description = '', 
-        author,
-        publisher,
-        genre,
-        language,
-        price = 0, 
-        imageUrl = 'https://basingers.com/public/images/no-product-image.png',
-        stock
-    ){
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.author = author;
-        this.publisher = publisher;
-        this.genre = genre;
-        this.language = language;
-        this.price = price;
-        this.img_url = imageUrl;
-        this.stock = stock;
+    imageUrl: string;
+  
+    constructor(id, title, description = '', price = 0, imageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR608TWmLRWFNYPlY5xgKkgZPYe7mwv0GDMDtAS9nRdlVo4aytG') {
+      this.id = id
+      this.title = title
+      this.description = description
+      this.price = price
+      this.imageUrl = imageUrl
     }
-}
+  }

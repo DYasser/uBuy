@@ -60,27 +60,6 @@
             </div>
 
             <div class="mb-3">
-                <label for="username">Username</label>
-                <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                </div>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-                </div>
-            </div>
-
-            <div class="mb-3">
                 <label for="address">Address</label>
                 <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
                 <div class="invalid-feedback">
@@ -361,14 +340,14 @@
 
             <h4 class="mb-3">Payment</h4>
 
-            <div class="d-block my-3">
-                <div class="custom-control custom-radio">
-                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-                    <label class="custom-control-label" for="credit">Credit card</label>
+            <div class="pt-2 pb-4">
+                <div>
+                    <input  name="paymentMethod" type="radio" checked="true">
+                    <label id="credit" for="credit">Credit card</label>
                 </div>
-                <div class="custom-control custom-radio">
-                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                    <label class="custom-control-label" for="debit">Debit card</label>
+                <div>
+                    <input name="paymentMethod" type="radio"  >
+                    <label id="debit"  for="debit" >Debit card</label>
                 </div>
             </div>
             <div class="row">

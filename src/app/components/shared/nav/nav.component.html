@@ -1,18 +1,18 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">UBuy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['home']" routerLinkActive="active">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['catalogue']" routerLinkActive="active">Catalogue</a>
-            </li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-4 px-lg-5">
+        <a id="logo" [routerLink]="['home']">UBuy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link" [routerLink]="['home']" routerLinkActive="active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['catalogue']" routerLinkActive="active">Catalogue</a></li>
+                
             </ul>
+            <button id="cart" class="btn btn-lg btn-outline-light" (click)="gotoCart()">
+                <i class="bi-cart-fill"></i>
+                Cart
+                <span id="panier" class="badge bg-dark text-white ms-1 rounded-pill">{{classRef2.number}}</span>
+            </button>
         </div>
     </div>
     <div class="row successMsg" *ngIf="classRef.showMsg" (click)="close()">

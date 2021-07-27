@@ -1,0 +1,20 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+    <div class="fadeIn first" >
+        <mat-icon>login</mat-icon>
+    </div>
+    
+    <form [formGroup]="formVar">
+        <input type="text" id="login" formControlName="username" class="fadeIn second" placeholder="Username" >
+        <input type="password" id="password" formControlName="password" class="fadeIn third" placeholder="Password" >
+        <input type="submit" class="fadeIn fourth" value="Log In" (click) = "login()">
+    </form>
+    
+    <h5 style="color: red;" *ngIf="formVar.value.username === 'smtg'"> No Match </h5>
+
+    <div id="formFooter">
+        <a class="underlineHover" 
+        [routerLink]="['/reset-password']" routerLinkActive="active">Forgot Password?</a>
+    </div>
+    </div>
+</div>

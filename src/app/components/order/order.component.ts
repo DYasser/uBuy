@@ -25,7 +25,6 @@ export class OrderComponent implements OnInit {
     });
     this.cartTotal = CartComponent.cartTotal;
     this.promocode = false;
-    console.log(this.cartItems);
   }
 
   checkPromo(value:string){
@@ -37,6 +36,7 @@ export class OrderComponent implements OnInit {
 
   order(){
     CartComponent.cartItems = [];
+    CartComponent.number = 0;
     this.router.navigate(['home']);
   }
 

@@ -1,5 +1,11 @@
 body{
     background-color: rgba(255,255,255,0.9);
     padding: 17px;
+    margin: 0 80px 40px 80px;
     border-radius: 5px;
+}
+
+#credit, #debit{
+    margin-bottom: 5px;
+    margin-left: 5px;
 }

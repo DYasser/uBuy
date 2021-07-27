@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
 
   ];
   public static cartTotal = 0;
+  public static number = 0;
 
   publicReference = CartComponent;
 
@@ -60,6 +61,12 @@ export class CartComponent implements OnInit {
     CartComponent.cartItems.forEach( item => {
       CartComponent.cartTotal+= item.qty*item.price;
     })
+    
+    CartComponent.number = 0;
+    CartComponent.cartItems = CartComponent.cartItems;
+    CartComponent.cartItems.forEach( item => {
+      CartComponent.number+= 1*item.qty;
+    });
   }
 
   gotoCart(){

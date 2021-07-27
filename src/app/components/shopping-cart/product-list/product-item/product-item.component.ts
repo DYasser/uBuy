@@ -21,7 +21,7 @@ export class ProductItemComponent implements OnInit {
       this.productItem.img_url = 'https://basingers.com/public/images/no-product-image.png'
     }
     if(this.productItem.description === ""){
-      this.productItem.description = "No description for " + this.productItem.title;
+      this.productItem.description = "There is unfortunately no description for " + this.productItem.title;
     }
   }
 

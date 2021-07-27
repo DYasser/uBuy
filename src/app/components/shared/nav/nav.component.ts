@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartComponent } from 'src/app/components/shopping-cart/cart/cart.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,8 +12,10 @@ export class NavComponent implements OnInit {
   public static showMsg = false;
 
   public classRef = NavComponent;
+  
+  public classRef2 = CartComponent;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +23,11 @@ export class NavComponent implements OnInit {
   close()
   {
     NavComponent.showMsg = false;
+  }
+
+
+  gotoCart(){
+    this.router.navigate(['cart']);
   }
 
 }
