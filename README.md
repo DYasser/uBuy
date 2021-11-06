@@ -30,7 +30,9 @@ When the user first enters the website, they find themselves in the login page w
 
 As we can see in the picture above that the only menus available for the user to browse through are `Login`, `Register`, and `Reset Password`. If the user doesn’t use a correct username of password, the website shows that the information is incorrect as shown here:
 
-![image](https://user-images.githubusercontent.com/48309505/130565365-6d75d7af-ddbc-4aa6-baa3-4150772f3710.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48309505/130565365-6d75d7af-ddbc-4aa6-baa3-4150772f3710.png" />
+</p>
 
 If the user doesn’t have an account he can always go to the `register` screen and create an account by giving a username, email, password, and an answer to incase he ever forgets his password to be able to reset it.
 
@@ -38,7 +40,9 @@ If the user doesn’t have an account he can always go to the `register` screen 
 
 After creating an account and not remembering the password, the user visits the `Reset Password` page to get his new password that he can use to login.
 
-![image](https://user-images.githubusercontent.com/48309505/130565437-fad9b4b3-e224-4410-b706-8e5edec857b2.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48309505/130565437-fad9b4b3-e224-4410-b706-8e5edec857b2.png" />
+</p>
 
 After finally having an account and login in without any problem, the user can finally browse through the gallery of products shown in the home page.
 	
@@ -64,7 +68,9 @@ The user is supposed to enter his information (first name, family name, address,
 
 If the user types ‘books’ in the redeem code area he can get a small reduction on his total as shown here:
 
-![image](https://user-images.githubusercontent.com/48309505/130565867-d7a3ff6a-889f-4792-9bbf-6c3b105c19fc.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48309505/130565867-d7a3ff6a-889f-4792-9bbf-6c3b105c19fc.png" />
+</p>
 
 Finally, the user can proceed to checkout and will be redirected to the home page where he can order more products for himself. 
 
