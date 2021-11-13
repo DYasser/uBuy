@@ -8,7 +8,7 @@ Clone the repository using `git clone https://www.github.com/DYasser/uBuy.git` t
 
 Finally, open `localhost:4200` in your browser to be able to see the chat and use it.
 
-## What is it about
+## What is it about 
 
 The project I coded is a shopping website. It is a fully working website where the user is able to log in, register, and add products to his cart then proceed to pay. I used `Angular` and `NodeJs` to create the website with its front end and back end API that controls all the relations with the database.
 
