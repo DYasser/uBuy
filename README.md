@@ -1,4 +1,4 @@
-# UBuy 
+# UBuy  
  
 To create this project I used [`Angular`](https://github.com/angular/angular) for all front-end tasks and [`NodeJs`](https://github.com/nodejs/node) for the [back-end](https://github.com/DYasser/uBuyApi). 
 
