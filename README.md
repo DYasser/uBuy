@@ -1,7 +1,7 @@
 # UBuy  
  
 To create this project I used [`Angular`](https://github.com/angular/angular) for all front-end tasks and [`NodeJs`](https://github.com/nodejs/node) for the [back-end](https://github.com/DYasser/uBuyApi). 
-
+ 
 ## How to run
 
 Clone the repository using `git clone https://www.github.com/DYasser/uBuy.git` then set up angular and nodejs before opening the folder. Open the folder and run in git bash or any command-line interpreter the command `npm start` to start the nodeJs server, then type `npm start` or `ng serve` inside the client folder to run the angular server.
